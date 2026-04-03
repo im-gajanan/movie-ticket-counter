@@ -1,0 +1,156 @@
+body {
+margin:0;
+font-family:Arial;
+background:#020617;
+color:white;
+}
+
+header {
+text-align:center;
+padding:20px;
+}
+
+/* 🎬 MOVIES */
+.movies {
+display:flex;
+justify-content:center;
+gap:20px;
+padding:20px;
+flex-wrap:wrap;
+}
+
+.movie-card {
+width:180px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.movie-card img {
+width:100%;
+border-radius:10px;
+}
+
+.movie-card.dim { opacity:0.3; }
+.movie-card.active { transform:scale(1.2); }
+
+/* 🎟️ */
+.hidden { display:none; }
+
+.selected-movie {
+text-align:center;
+}
+
+.selected-movie img {
+width:200px;
+border-radius:10px;
+}
+
+/* 🔢 */
+.seat-selector {
+text-align:center;
+margin:10px;
+}
+
+/* 💺 */
+.seats { margin-top:20px; }
+
+.tier {
+text-align:center;
+margin-top:15px;
+font-weight:bold;
+}
+
+.row {
+display:flex;
+justify-content:center;
+margin:10px;
+}
+
+.gap { width:40px; }
+
+/* 🎟️ SEATS */
+.seat {
+width:35px;
+height:35px;
+margin:5px;
+background:#555;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+}
+
+.seat.selected { background:#3b82f6; }
+.seat.booked { background:#e50914; cursor:not-allowed; }
+
+/* 🎥 SCREEN */
+.screen {
+height:40px;
+width:70%;
+margin:30px auto;
+background:linear-gradient(to right,#fff,#3b82f6);
+border-radius:10px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow {
+from { box-shadow:0 0 10px white; }
+to { box-shadow:0 0 30px #3b82f6; }
+}
+
+/* 🔴 BUTTONS */
+#checkout, #confirm {
+background:#e50914;
+color:white;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+}
+
+#checkout {
+position:fixed;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+}
+
+/* 🪟 MODAL */
+.modal {
+position:fixed;
+top:0; left:0;
+width:100%; height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.modal-content {
+background:#111;
+padding:20px;
+}
+
+/* 🎉 SUCCESS */
+.success {
+position:fixed;
+top:0; left:0;
+width:100%; height:100%;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background:black;
+}
+
+/* ✨ TOAST */
+.toast {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#111;
+padding:10px;
+opacity:0;
+transition:0.3s;
+}
+
+.toast.show { opacity:1; }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>🎬 Movie Booking</header>
+
+<!-- 🎬 MOVIES -->
+<section class="movies">
+
+<div class="movie-card" data-movie="Wuthering Height">
+<img src="images/movie1.jpg"><h3>Wuthering Height</h3>
+</div>
+
+<div class="movie-card" data-movie="Spiderman: Brand New Day">
+<img src="images/movie2.jpg"><h3>Spiderman: Brand New Day</h3>
+</div>
+
+<div class="movie-card" data-movie="Odyssey">
+<img src="images/movie3.jpg"><h3>Odyssey</h3>
+</div>
+
+<div class="movie-card" data-movie="Avatar 3">
+<img src="images/movie4.jpg"><h3>Avatar 3</h3>
+</div>
+
+<div class="movie-card" data-movie="Avengers: Secret Wars">
+<img src="images/movie5.jpg"><h3>Avengers: Secret Wars</h3>
+</div>
+
+</section>
+
+<!-- 🎟️ BOOKING -->
+<section class="booking hidden">
+
+<div class="selected-movie">
+<img id="selectedPoster">
+<h2 id="movieName"></h2>
+</div>
+
+<!-- 🔢 SEAT SELECTOR -->
+<div class="seat-selector">
+<button id="minus">−</button>
+<span id="seatCount">1</span>
+<button id="plus">+</button>
+</div>
+
+<!-- 📊 INFO -->
+<div class="info">
+<p>Seats: <span id="selectedCount">0</span>/<span id="maxSeats">1</span></p>
+<p>Total: ₹<span id="total">0</span></p>
+</div>
+
+<!-- 💺 SEATS -->
+<div class="seats">
+
+<div class="tier">GOLD - ₹300</div>
+<div class="row">
+<div class="seat">A1</div><div class="seat">A2</div>
+<div class="gap"></div>
+<div class="seat">A3</div><div class="seat">A4</div>
+<div class="seat">A5</div><div class="seat">A6</div>
+</div>
+
+<div class="tier">SILVER - ₹220</div>
+<div class="row">
+<div class="seat">B1</div><div class="seat">B2</div>
+<div class="gap"></div>
+<div class="seat">B3</div><div class="seat">B4</div>
+<div class="seat">B5</div><div class="seat">B6</div>
+</div>
+
+<div class="row">
+<div class="seat">C1</div><div class="seat">C2</div>
+<div class="gap"></div>
+<div class="seat">C3</div><div class="seat">C4</div>
+<div class="seat">C5</div><div class="seat">C6</div>
+</div>
+
+<div class="tier">REGULAR - ₹150</div>
+<div class="row">
+<div class="seat">D1</div><div class="seat">D2</div>
+<div class="gap"></div>
+<div class="seat">D3</div><div class="seat">D4</div>
+<div class="seat">D5</div><div class="seat">D6</div>
+</div>
+
+</div>
+
+<!-- 🎥 SCREEN -->
+<div class="screen"></div>
+
+<button id="checkout">Checkout</button>
+
+</section>
+
+<!-- 🪟 MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<p id="summary"></p>
+<button id="confirm">Confirm</button>
+</div>
+</div>
+
+<!-- 🎉 SUCCESS -->
+<div class="success" id="success">
+<h1>🎉 BOOKING CONFIRMED</h1>
+<h2 id="successMovie"></h2>
+</div>
+
+<!-- ✨ TOAST -->
+<div id="toast" class="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
